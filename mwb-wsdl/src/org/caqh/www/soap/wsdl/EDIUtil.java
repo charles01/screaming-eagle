@@ -1,5 +1,8 @@
 package org.caqh.www.soap.wsdl;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class EDIUtil {
 
 	//edi270-header 
@@ -20,6 +23,22 @@ public class EDIUtil {
 	public static final String RECIEVER_ID 		= "OFFALLY";
 	public static final String SENDER_ID 		= "717009";
 	public static final String DATE_FORMAT 		= "yyyy-MM-dd'T'HH:mm:ss'Z'";
+	//ISA
+	public static final String ISA_CODE = "ISA";
+	public static final String SPACE_LENGTH_10 = "          ";
+	public static final String SPACE_LENGTH_09 = "         ";
+	public static final String SPACE_LENGTH_08 = "        ";
+	
+	public static final String GS_CODE = "GS";
+	public static final String ST_CODE = "ST";
+	public static final String BHT_CODE = "BHT";
+	public static final String HL_CODE = "HL";
+	public static final String NM1_CODE = "NM1";
+	
+	public static final String SEPARATOR = "*";
+	public static final String EOS = "~";
+	public static final String NEW_LINE = "\n";
+
 	
 	//edi 270 request
 //	public static final String PAYLOAD_REQUEST 	=   "ISA*00*          *00*          *ZZ*717009         *ZZ*OFFALLY        *191031*1010*^*00501*000000001*0*T*:~\n" +
@@ -134,5 +153,50 @@ public class EDIUtil {
 												"SE*66*584863044~\n"+
 												"GE*1*58486~\n"+
 												"IEA*1*584863044~\n";
+	
+	public static final String DATE_PATTERN_YYMMDD = "yyMMdd";
+	public static final String DATE_PATTERN_YYYYMMDD = "YYYYMMdd";
+	public static final String DATE_PATTERN_YYYYMMDDHHMMSS = "YYYYMMddHHmmss";
+	
+	public static final String TIME_PATTERN_HHMM = "HHmm";
+	public static final String TIME_PATTERN_HHMMSS = "HHmmss";
+
+
+	/**
+	 * Method to getDate in different forms.
+	 * @param pattern
+	 * @return date.
+	 */
+	public static String getDate(String pattern) {
+		String date = null;
+		if(pattern.equalsIgnoreCase(DATE_PATTERN_YYMMDD)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			date = simpleDateFormat.format(new Date());
+		}else if(pattern.equalsIgnoreCase(DATE_PATTERN_YYYYMMDD)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			date = simpleDateFormat.format(new Date());
+		}else if(pattern.equalsIgnoreCase(DATE_PATTERN_YYYYMMDDHHMMSS)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			date = simpleDateFormat.format(new Date());
+		}
+		return date;
+	}
+	
+	/**
+	 * Method to getTime in different forms.
+	 * @param pattern
+	 * @return time.
+	 */
+	public static String getTime(String pattern) {
+		String time = null;
+		if(pattern.equalsIgnoreCase(TIME_PATTERN_HHMM)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			time = simpleDateFormat.format(new Date());
+		}else if(pattern.equalsIgnoreCase(TIME_PATTERN_HHMMSS)) {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			time = simpleDateFormat.format(new Date());
+		}
+		return time;
+	}
 	
 }

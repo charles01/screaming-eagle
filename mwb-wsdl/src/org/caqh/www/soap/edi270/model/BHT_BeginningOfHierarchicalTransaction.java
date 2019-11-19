@@ -1,14 +1,17 @@
 package org.caqh.www.soap.edi270.model;
 
-/** Example Code - BHT*0022*13*20191104105106*20191104*105106~ **/
-public class BHT_BeginningOfHierarchicalTransaction {
+import org.caqh.www.soap.wsdl.EDIUtil;
 
-	private String hierarchicalStructureCode;
-	private String transactionSetPurposeCode;
-	private String referenceIdentification;
-	private String date;
-	private String time;
+/** Example Code - BHT*0022*13*20191104105106*20191104*105106~ **/
+public class BHT_BeginningOfHierarchicalTransaction extends EDIUtil {
+
+	private String hierarchicalStructureCode = "0022";
+	private String transactionSetPurposeCode = "13";
+	private String referenceIdentification = getDate(DATE_PATTERN_YYYYMMDDHHMMSS);
+	private String date = getDate(DATE_PATTERN_YYYYMMDD);
+	private String time = getTime(TIME_PATTERN_HHMMSS);
 	private String transactionTypeCode;
+	
 	/**
 	 * @return the hierarchicalStructureCode
 	 */

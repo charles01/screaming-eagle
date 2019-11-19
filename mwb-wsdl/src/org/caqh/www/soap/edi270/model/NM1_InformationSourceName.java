@@ -3,13 +3,13 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - NM1*PR*2*WPS Health Insurance*****PI*10878~ **/
 public class NM1_InformationSourceName {
 	
-	private String entityIdentifierCode;
-	private String entityTypeQualifier;
+	private String entityIdentifierCode = "PR";
+	private String entityTypeQualifier = "2";
 	private String nameLastorOrganizationName;
-	private String nameFirst;
-	private String nameMiddle;
-	private String nameSuffix;
-	private String identificationCodeQualifier;
+	private String nameFirst = "";
+	private String nameMiddle = "";
+	private String nameSuffix = "";
+	private String identificationCodeQualifier = "PI";
 	private String identificationCode;
 	
 	/**

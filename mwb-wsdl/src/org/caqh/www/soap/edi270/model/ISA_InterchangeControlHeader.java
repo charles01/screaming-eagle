@@ -1,24 +1,26 @@
 package org.caqh.www.soap.edi270.model;
 
+import org.caqh.www.soap.wsdl.EDIUtil;
+
 /** Example Code - ISA*00*          *00*          *ZZ*111111         *ZZ*OFFALLY        *191104*1051*^*00501*003906526*0*P*:~ **/
-public class ISA_InterchangeControlHeader {
+public class ISA_InterchangeControlHeader extends EDIUtil {
 		
-	private String authorizationInformationQualifier;
-	private String authorizationInformation;
-	private String securityInformationQualifier;
-	private String securityInformation;
-	private String interchangeIDQualifier1;
-	private String interchangeSenderID;
-	private String interchangeIDQualifier2;
-	private String interchangeReceiverID;
-	private String interchangeDate;
-	private String interchangeTime;
-	private String repetitionSeparator;
-	private String interchangeControlVersionNumber;
-	private String interchangeControlNumber;
-	private String acknowledgmentRequested;
-	private String interchangeUsageIndicator;
-	private String componentElementSeparator;
+	private String authorizationInformationQualifier = "00";
+	private String authorizationInformation = "          ";
+	private String securityInformationQualifier = "00";
+	private String securityInformation = "          ";
+	private String interchangeIDQualifier1 = "ZZ";
+	private String interchangeSenderID = SENDER_ID;
+	private String interchangeIDQualifier2 = "ZZ";;
+	private String interchangeReceiverID = RECIEVER_ID;
+	private String interchangeDate = getDate(DATE_PATTERN_YYMMDD);
+	private String interchangeTime = getTime(TIME_PATTERN_HHMM);
+	private String repetitionSeparator = "^";
+	private String interchangeControlVersionNumber = "00501";
+	private String interchangeControlNumber = "003906526";
+	private String acknowledgmentRequested = "0";
+	private String interchangeUsageIndicator = "P";
+	private String componentElementSeparator = ":";
 	
 	/**
 	 * @return the authorizationInformationQualifier

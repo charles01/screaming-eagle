@@ -3,9 +3,9 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - HL*1**20*1~  **/
 public class HL_InformationSourceLevel {
 
-	private String hierarchicalIDNumber;
-	private String hierarchicalLevelCode;
-	private String hierarchicalChildCode;
+	private String hierarchicalIDNumber = "1";
+	private String hierarchicalLevelCode = "20";
+	private String hierarchicalChildCode = "1";
 	
 	/**
 	 * @return the hierarchicalIDNumber

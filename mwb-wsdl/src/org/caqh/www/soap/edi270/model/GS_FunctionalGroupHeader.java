@@ -1,16 +1,18 @@
 package org.caqh.www.soap.edi270.model;
 
-/** Example Code - GS*HS*111111*OFFALLY*20191104*1051*1*X*005010X279A1~ **/
-public class GS_FunctionalGroupHeader {
+import org.caqh.www.soap.wsdl.EDIUtil;
 
-	private String functionalIdentifierCode;
-	private String applicationSenderCode;
-	private String applicationReceiverCode;
-	private String date;
-	private String time;
-	private String groupControlNumber;
-	private String responsibleAgencyCode;
-	private String versionCode;
+/** Example Code - GS*HS*111111*OFFALLY*20191104*1051*1*X*005010X279A1~ **/
+public class GS_FunctionalGroupHeader extends EDIUtil{
+
+	private String functionalIdentifierCode = "HS";
+	private String applicationSenderCode = SENDER_ID;
+	private String applicationReceiverCode = RECIEVER_ID;
+	private String date = getDate(DATE_PATTERN_YYYYMMDD);
+	private String time = getTime(TIME_PATTERN_HHMM);
+	private String groupControlNumber = "1";
+	private String responsibleAgencyCode = "X";
+	private String versionCode = "005010X279A1";
 	
 	/**
 	 * @return the functionalIdentifierCode

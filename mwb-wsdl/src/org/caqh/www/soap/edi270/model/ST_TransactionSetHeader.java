@@ -3,9 +3,9 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - ST*270*0001*005010X279A1~ **/
 public class ST_TransactionSetHeader {
 
-	private String transactionSetIdentifierCode;
-	private String transactionSetControlNumber;
-	private String implementationConventionReference;
+	private String transactionSetIdentifierCode = "270";
+	private String transactionSetControlNumber = "0001";
+	private String implementationConventionReference = "005010X279A1";
 	
 	/**
 	 * @return the transactionSetIdentifierCode
