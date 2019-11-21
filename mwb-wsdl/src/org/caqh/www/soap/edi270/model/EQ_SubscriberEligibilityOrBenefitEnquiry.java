@@ -3,7 +3,7 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - EQ*AG^AH^30^42^45^47~ **/
 public class EQ_SubscriberEligibilityOrBenefitEnquiry {
 
-	private String ServiceTypeCode;
+	private String ServiceTypeCode ="AG^AH^30^42^45^47";
 	private String CompositeMedicalProcedureIdentifier;
 	private String ProductOrServiceIDQualifier;
 	private String ProductOrServiceID;

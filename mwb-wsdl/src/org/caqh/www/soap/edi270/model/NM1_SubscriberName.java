@@ -3,14 +3,14 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - NM1*IL*1*Test*Test****MI*1111111111~ **/
 public class NM1_SubscriberName {
 
-	private String entityIdentifierCode;
-	private String entityTypeQualifier;
-	private String nameLastorOrganizationName;
-	private String nameFirst;
-	private String nameMiddle;
-	private String nameSuffix;
-	private String identificationCodeQualifier;
-	private String identificationCode;
+	private String entityIdentifierCode = "1L";
+	private String entityTypeQualifier = "1";
+	private String nameLastorOrganizationName = "";
+	private String nameFirst = "";
+	private String nameMiddle = "";
+	private String nameSuffix = "";
+	private String identificationCodeQualifier = "MI";
+	private String identificationCode ="1111111111";
 	
 	/**
 	 * @return the entityIdentifierCode

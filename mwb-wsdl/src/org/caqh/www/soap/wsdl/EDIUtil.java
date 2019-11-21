@@ -34,6 +34,11 @@ public class EDIUtil {
 	public static final String BHT_CODE = "BHT";
 	public static final String HL_CODE = "HL";
 	public static final String NM1_CODE = "NM1";
+	public static final String DMG_CODE = "DMG";
+	public static final String EQ_CODE = "EQ";
+	public static final String SE_CODE = "SE";
+	public static final String GE_CODE = "GE";
+	public static final String IEA_CODE = "IEA";
 	
 	public static final String SEPARATOR = "*";
 	public static final String EOS = "~";

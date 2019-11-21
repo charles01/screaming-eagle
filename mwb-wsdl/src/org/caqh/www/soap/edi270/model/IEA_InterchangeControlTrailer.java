@@ -3,8 +3,8 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - IEA*1*003906526~ **/
 public class IEA_InterchangeControlTrailer {
 	
-	private String NumberofIncludedFunctionalGroups;
-	private String InterchangeControlNumber;
+	private String NumberofIncludedFunctionalGroups ="1";
+	private String InterchangeControlNumber = "003906526";
 	
 	/**
 	 * @return the numberofIncludedFunctionalGroups

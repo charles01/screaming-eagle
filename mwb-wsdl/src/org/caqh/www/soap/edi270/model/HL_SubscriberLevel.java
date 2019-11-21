@@ -3,10 +3,10 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - HL*3*2*22*0~  **/
 public class HL_SubscriberLevel {
 
-	private String hierarchicalIDNumber;
-	private String hierarchicalParentIDNumber;
-	private String hierarchicalLevelCode;
-	private String hierarchicalChildCode;
+	private String hierarchicalIDNumber = "3";
+	private String hierarchicalParentIDNumber = "2";
+	private String hierarchicalLevelCode = "22";
+	private String hierarchicalChildCode = "0";
 	
 	/**
 	 * @return the hierarchicalIDNumber

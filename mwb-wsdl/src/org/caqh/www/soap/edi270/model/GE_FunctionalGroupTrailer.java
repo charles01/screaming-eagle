@@ -3,8 +3,8 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - GE*1*1~ **/
 public class GE_FunctionalGroupTrailer {
 
-	private String NumberofTransactionSetsIncluded;
-	private String GroupControlNumber;
+	private String NumberofTransactionSetsIncluded = "1";
+	private String GroupControlNumber = "1";
 	
 	/**
 	 * @return the numberofTransactionSetsIncluded

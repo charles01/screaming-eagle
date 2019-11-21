@@ -3,9 +3,9 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - DMG*D8*19581212~ **/
 public class DMG_SubscriberDemographicInformation {
 
-	private String dateTimePeriodFormatQualifier;
-	private String dateTimePeriod;
-	private String genderCode;
+	private String dateTimePeriodFormatQualifier = "D8";
+	private String dateTimePeriod = "";
+	private String genderCode = "";
 	
 	/**
 	 * @return the dateTimePeriodFormatQualifier

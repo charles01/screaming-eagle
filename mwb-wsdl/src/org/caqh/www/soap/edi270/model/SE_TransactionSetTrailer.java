@@ -3,8 +3,8 @@ package org.caqh.www.soap.edi270.model;
 /** Example Code - SE*11*0001~ **/
 public class SE_TransactionSetTrailer {
 
-	private String NumberofIncludedSegments;
-	private String TransactionSetControlNumber;
+	private String NumberofIncludedSegments = "11";
+	private String TransactionSetControlNumber = "0001";
 	
 	/**
 	 * @return the numberofIncludedSegments
