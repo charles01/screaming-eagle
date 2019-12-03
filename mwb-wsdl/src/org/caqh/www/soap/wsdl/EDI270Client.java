@@ -15,16 +15,15 @@ public class EDI270Client extends EDIUtil {
 			GetRealTimeRequestEDI270 getRealTimeRequestEDI270 = new GetRealTimeRequestEDI270();
 			COREEnvelopeRealTimeRequest realTimeRequest = new COREEnvelopeRealTimeRequest();
 			realTimeRequest.setCORERuleVersion(VERSION);
-			realTimeRequest.setPayload(PAYLOAD_REQUEST);
+			String payload = GetRealTimeRequestEDI270.get270Request();
+			realTimeRequest.setPayload(payload);
 			realTimeRequest.setPayloadID(PAYLOAD_ID);
 			realTimeRequest.setPayloadType(PAYLOAD_TYPE);
 			realTimeRequest.setProcessingMode(MODE);
 			realTimeRequest.setReceiverID(RECIEVER_ID);
 			realTimeRequest.setSenderID(SENDER_ID);
 			realTimeRequest.setTimeStamp(new SimpleDateFormat(DATE_FORMAT).format(new Date()));
-			//realTimeResponse = GetEDI271Response.getCOREEnvelopeRealTimeResponse();
 			realTimeResponse = stub.RealTimeTransaction(realTimeRequest);
-			System.out.println(realTimeResponse.toString());
   		}catch(Exception e) {
 			e.printStackTrace();
 		}

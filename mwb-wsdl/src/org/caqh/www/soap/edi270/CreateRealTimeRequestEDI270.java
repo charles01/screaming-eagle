@@ -75,7 +75,7 @@ public class CreateRealTimeRequestEDI270 extends EDIUtil {
 		input.append(isa_InterchangeControlHeader.getInterchangeControlNumber() + SEPARATOR);
 		input.append(isa_InterchangeControlHeader.getAcknowledgmentRequested() + SEPARATOR);
 		input.append(isa_InterchangeControlHeader.getInterchangeUsageIndicator() + SEPARATOR);
-		input.append(isa_InterchangeControlHeader.getComponentElementSeparator() + SEPARATOR);
+		input.append(isa_InterchangeControlHeader.getComponentElementSeparator());
 		input.append(EOS);
 		input.append(NEW_LINE);
 	}
@@ -120,7 +120,7 @@ public class CreateRealTimeRequestEDI270 extends EDIUtil {
 	 * @param bht_BeginningOfHierarchicalTransaction
 	 */
 	private void write_BHT_BeginningOfHierarchicalTransaction(StringBuilder input,BHT_BeginningOfHierarchicalTransaction bht_BeginningOfHierarchicalTransaction) {
-		input.append(ST_CODE + SEPARATOR);
+		input.append(BHT_CODE + SEPARATOR);
 		input.append(bht_BeginningOfHierarchicalTransaction.getHierarchicalStructureCode() + SEPARATOR);
 		input.append(bht_BeginningOfHierarchicalTransaction.getTransactionSetPurposeCode() + SEPARATOR);
 		input.append(bht_BeginningOfHierarchicalTransaction.getReferenceIdentification() + SEPARATOR);
@@ -251,7 +251,7 @@ public class CreateRealTimeRequestEDI270 extends EDIUtil {
 	 * @param eq_SubscriberEligibilityOrBenefitEnquiry.
 	 */
 	private void write_EQ_SubscriberEligibilityOrBenefitEnquiry(StringBuilder input, EQ_SubscriberEligibilityOrBenefitEnquiry eq_SubscriberEligibilityOrBenefitEnquiry) {
-		input.append(DMG_CODE + SEPARATOR);
+		input.append(EQ_CODE + SEPARATOR);
 		input.append(eq_SubscriberEligibilityOrBenefitEnquiry.getServiceTypeCode() + SEPARATOR);
 		input.append(EOS);
 		input.append(NEW_LINE);

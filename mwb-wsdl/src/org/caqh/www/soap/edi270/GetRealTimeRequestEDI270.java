@@ -4,29 +4,29 @@ import org.caqh.www.soap.edi270.model.*;
 
 public class GetRealTimeRequestEDI270 {
 
-	public static void main(String[] args) {
+	public static String get270Request() {
 			EDIRequest270 ediRequest270 = new EDIRequest270();
 			ediRequest270.setIsa_InterchangeControlHeader(new ISA_InterchangeControlHeader());
 			ediRequest270.setGs_FunctionalGroupHeader(new GS_FunctionalGroupHeader());
 			ediRequest270.setSt_TransactionSetHeader(new ST_TransactionSetHeader());
 			ediRequest270.setBht_BeginningOfHierarchicalTransaction(new BHT_BeginningOfHierarchicalTransaction());
-			ediRequest270.setHl_InformationSourceLevel(new HL_InformationSourceLevel());
 			
+			ediRequest270.setHl_InformationSourceLevel(new HL_InformationSourceLevel());
 			ediRequest270.setNm1_InformationSourceName(new NM1_InformationSourceName());
-			ediRequest270.getNm1_InformationSourceName().setNameLastorOrganizationName("WPS Health Insurance");
-			ediRequest270.getNm1_InformationSourceName().setIdentificationCode("10878");
+			ediRequest270.getNm1_InformationSourceName().setNameLastorOrganizationName("Blue Shield of California");
+			ediRequest270.getNm1_InformationSourceName().setIdentificationCode("940360524");
 			
 			ediRequest270.setHl_InformationReceiverLevel(new HL_InformationReceiverLevel());
 			ediRequest270.setNm1_InformationReceiverName(new NM1_InformationReceiverName());
-			ediRequest270.getNm1_InformationReceiverName().setNameLastorOrganizationName("JONES");
+			ediRequest270.getNm1_InformationReceiverName().setNameLastorOrganizationName("ELHAM ELLE FARAJIAN DPM");
 			
 			ediRequest270.setHl_SubscriberLevel(new HL_SubscriberLevel());
 			ediRequest270.setNm1_SubscriberName(new NM1_SubscriberName());
-			ediRequest270.getNm1_SubscriberName().setNameLastorOrganizationName("JONES");
-			ediRequest270.getNm1_SubscriberName().setNameFirst("JOE");
+			ediRequest270.getNm1_SubscriberName().setNameLastorOrganizationName("Abujbara");
+			ediRequest270.getNm1_SubscriberName().setNameFirst("Nabil");
 			
 			ediRequest270.setDmg_SubscriberDemographicInformation(new DMG_SubscriberDemographicInformation());
-			ediRequest270.getDmg_SubscriberDemographicInformation().setDateTimePeriod("19581212");
+			ediRequest270.getDmg_SubscriberDemographicInformation().setDateTimePeriod("19570127");
 			
 			ediRequest270.setEq_SubscriberEligibilityOrBenefitEnquiry(new EQ_SubscriberEligibilityOrBenefitEnquiry());
 			
@@ -37,36 +37,6 @@ public class GetRealTimeRequestEDI270 {
 			CreateRealTimeRequestEDI270 createRealTimeRequestEDI270 = new CreateRealTimeRequestEDI270();
 			String inputRequest = createRealTimeRequestEDI270.createRequest(ediRequest270);
 			System.out.println(inputRequest);
+			return inputRequest;
 	}
-//	
-//	/**
-//	 * Method to getISA_InterchangeControlHeader.
-//	 * @param request.
-//	 * @return isa_InterchangeControlHeader.
-//	 */
-//	private static ISA_InterchangeControlHeader getISA_InterchangeControlHeader() {
-//			ISA_InterchangeControlHeader isa_InterchangeControlHeader = new ISA_InterchangeControlHeader();
-//			try{
-//					isa_InterchangeControlHeader.setAuthorizationInformationQualifier("");
-//					isa_InterchangeControlHeader.setAuthorizationInformation("");
-//					isa_InterchangeControlHeader.setSecurityInformationQualifier("");
-//					isa_InterchangeControlHeader.setSecurityInformation("");
-//					isa_InterchangeControlHeader.setInterchangeIDQualifier1("");
-//					isa_InterchangeControlHeader.setInterchangeSenderID("");
-//					isa_InterchangeControlHeader.setInterchangeIDQualifier2("");
-//					isa_InterchangeControlHeader.setInterchangeReceiverID("");
-//					isa_InterchangeControlHeader.setInterchangeDate("");
-//					isa_InterchangeControlHeader.setInterchangeTime("");
-//					isa_InterchangeControlHeader.setRepetitionSeparator("");
-//					isa_InterchangeControlHeader.setInterchangeControlVersionNumber("");
-//					isa_InterchangeControlHeader.setInterchangeControlNumber("");
-//					isa_InterchangeControlHeader.setAcknowledgmentRequested("");
-//					isa_InterchangeControlHeader.setInterchangeUsageIndicator("");
-//					isa_InterchangeControlHeader.setComponentElementSeparator("");
-//			}catch(Exception e){
-//					e.printStackTrace();
-//			}
-//			return isa_InterchangeControlHeader;
-//	}
-
 }
