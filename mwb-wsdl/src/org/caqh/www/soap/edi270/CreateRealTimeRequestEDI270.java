@@ -45,8 +45,6 @@ public class CreateRealTimeRequestEDI270 extends EDIUtil {
 				write_SE_TransactionSetTrailer(input, ediRequest270.getSe_TransactionSetTrailer());
 				write_GE_FunctionalGroupTrailer(input, ediRequest270.getGe_FunctionalGroupTrailer());
 				write_IEA_InterchangeControlTrailer(input, ediRequest270.getIea_InterchangeControlTrailer());
-				
-				
 			}catch(Exception e){
 				e.printStackTrace();
 			}

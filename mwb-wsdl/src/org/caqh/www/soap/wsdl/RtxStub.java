@@ -1104,9 +1104,6 @@ import javax.xml.soap.SOAPHeader;
                                            org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
                 org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
                 
-                System.out.println("RESPONSE");
-                System.out.println(_returnEnv);
-                
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
                                              org.caqh.www.soap.wsdl.RtxStub.COREEnvelopeRealTimeResponse.class,

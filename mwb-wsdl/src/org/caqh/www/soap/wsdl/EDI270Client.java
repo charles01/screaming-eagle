@@ -12,7 +12,6 @@ public class EDI270Client extends EDIUtil {
 		COREEnvelopeRealTimeResponse realTimeResponse = new COREEnvelopeRealTimeResponse();
 		try {
 			RtxStub stub = new RtxStub(END_POINT_URL);
-			GetRealTimeRequestEDI270 getRealTimeRequestEDI270 = new GetRealTimeRequestEDI270();
 			COREEnvelopeRealTimeRequest realTimeRequest = new COREEnvelopeRealTimeRequest();
 			realTimeRequest.setCORERuleVersion(VERSION);
 			String payload = GetRealTimeRequestEDI270.get270Request();
@@ -23,7 +22,12 @@ public class EDI270Client extends EDIUtil {
 			realTimeRequest.setReceiverID(RECIEVER_ID);
 			realTimeRequest.setSenderID(SENDER_ID);
 			realTimeRequest.setTimeStamp(new SimpleDateFormat(DATE_FORMAT).format(new Date()));
+			System.out.println("-------------- EDI 270 Request --------------");
+			System.out.println(realTimeRequest.getPayload());
 			realTimeResponse = stub.RealTimeTransaction(realTimeRequest);
+			System.out.println("-------------- EDI 270 Response --------------");
+			System.out.println(realTimeResponse.getPayload().replaceAll("~", "~\n"));
+			
   		}catch(Exception e) {
 			e.printStackTrace();
 		}

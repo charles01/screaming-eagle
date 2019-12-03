@@ -36,7 +36,6 @@ public class GetRealTimeRequestEDI270 {
 			
 			CreateRealTimeRequestEDI270 createRealTimeRequestEDI270 = new CreateRealTimeRequestEDI270();
 			String inputRequest = createRealTimeRequestEDI270.createRequest(ediRequest270);
-			System.out.println(inputRequest);
 			return inputRequest;
 	}
 }
