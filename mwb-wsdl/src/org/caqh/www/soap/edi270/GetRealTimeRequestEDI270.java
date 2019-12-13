@@ -4,6 +4,7 @@ import org.caqh.www.soap.edi270.model.*;
 
 public class GetRealTimeRequestEDI270 {
 
+	//sample
 	public static String get270Request() {
 			EDIRequest270 ediRequest270 = new EDIRequest270();
 			ediRequest270.setIsa_InterchangeControlHeader(new ISA_InterchangeControlHeader());
